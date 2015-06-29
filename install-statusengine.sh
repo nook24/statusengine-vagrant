@@ -2,7 +2,7 @@
 set -e
 wget https://github.com/nook24/statusengine/archive/1.4.2.tar.gz
 tar xfv 1.4.2.tar.gz
-statusengine-1.4.2/
+cd statusengine-1.4.2/
 sudo mkdir -p /opt/statusengine
 sudo mkdir -p /var/lib/pnp4nagios/perfdata/
 cd statusengine/src
@@ -15,10 +15,13 @@ mysql -uroot -pvagrant < nagios.sql
 cd ..
 
 sudo cp apache2/sites-available/* /etc/apache2/sites-available/
+a2enmod rewrite
 a2ensite statusengine
-service nagios restart
+service apache2 restart
  
 sudo cp -r cakephp /opt/statusengine/
+sudo mkdir -p /opt/statusengine/cakephp/app/tmp
+sudo chown www:data:www-data /opt/statusengine/cakephp/app/tmp -R
 sudo cp etc/init.d/statusengine /etc/init.d/statusengine
 sudo cp etc/init.d/mod_perfdata /etc/init.d/mod_perfdata
 sudo chmod +x /etc/init.d/statusengine
@@ -32,3 +35,5 @@ yes | /opt/statusengine/cakephp/app/Console/cake schema update --plugin Legacy -
 
 sudo update-rc.d statusengine defaults
 sudo service statusengine start
+
+sudo chown www:data:www-data /opt/statusengine/cakephp/app/tmp -R
