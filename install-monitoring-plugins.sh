@@ -6,5 +6,5 @@ cd monitoring-plugins-2.1.1/
 ./autogen.sh --prefix=/opt/naemon
 #./configure --prefix=/opt/naemon
 make all
-make install
+sudo make install
 cd ..

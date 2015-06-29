@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "--------------------------"
+echo -e "Setup done"
+echo "MySQL Username: root Passwort: vagrant"
+echo "SSH: ssh vagrant@127.0.0.1 -p 2222 Passwort: vagrant"
+echo "Open a browser an navigate to localhost:8080 to visit Statusengine Interface"
+echo "--------------------------"
+echo "Nice to know vagrant commands:"
+echo "vagrant ssh      - Open a shell via ssh"
+echo "vagrant halt     - Poweroff the vm"
+echo "vagrant destroy  - Factory reset the vm"
+echo "vagrant up       - Start the vm or reinstall it after factory reset"
+echo "--------------------------"
