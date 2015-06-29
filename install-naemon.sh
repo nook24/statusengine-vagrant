@@ -10,4 +10,7 @@ mkdir -p /opt/naemon
 make all
 make install
 make install-init
+echo "broker_module=/opt/statusengine/statusengine.o" > /opt/naemon/etc/naemon/naemon.cfg
 cd ..
+update-rc.d naemon defaults
+service naemon start
