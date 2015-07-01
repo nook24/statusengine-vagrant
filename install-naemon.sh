@@ -16,5 +16,7 @@ echo "broker_module=/opt/statusengine/statusengine.o" >> /opt/naemon/etc/naemon/
 echo '$USER1$=/opt/naemon/libexec' > /opt/naemon/etc/naemon/resource.cfg
 cd ..
 chown naemon:naemon /opt/naemon/var/ -R
+rm -r /opt/naemon/etc/naemon/conf.d/*
+cp -r naemon_config/* /opt/naemon/etc/naemon/conf.d/ 
 update-rc.d naemon defaults
 service naemon start
