@@ -94,7 +94,7 @@ $config = [
 			 * Type: String
 			 * Default: /opt/openitc/nagios/share/perfdata/
 			 */
-			'dir' => '/opt/openitc/nagios/share/perfdata/'
+			'dir' => '/var/lib/pnp4nagios/perfdata/'
 		],
 	
 		'MOD_GEARMAN' => [
