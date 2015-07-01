@@ -27,7 +27,7 @@ service apache2 restart
  
 cp -r cakephp /opt/statusengine/
 mkdir -p /opt/statusengine/cakephp/app/tmp
-chown www:data:www-data /opt/statusengine/cakephp/app/tmp -R
+chown www-data:www-data /opt/statusengine/cakephp/app/tmp -R
 cp etc/init.d/statusengine /etc/init.d/statusengine
 cp etc/init.d/mod_perfdata /etc/init.d/mod_perfdata
 chmod +x /etc/init.d/statusengine
@@ -42,4 +42,4 @@ yes | /opt/statusengine/cakephp/app/Console/cake schema update --plugin Legacy -
 update-rc.d statusengine defaults
 service statusengine start
 
-chown www:data:www-data /opt/statusengine/cakephp/app/tmp -R
+chown www-data:www-data /opt/statusengine/cakephp/app/tmp -R
