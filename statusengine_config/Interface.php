@@ -22,7 +22,7 @@ $config = [
 		'pnp4nagios' => '/usr/share/pnp4nagios/html/index.php',
 		
 		//If true the interface will show all SQL queries, if false not
-		'sql_dump' => true,
+		'sql_dump' => false,
 		
 		//Hide the openITCOCKPIT notice in footer
 		'hide_oitc' => false,
