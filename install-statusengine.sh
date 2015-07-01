@@ -1,8 +1,14 @@
 #!/bin/bash
 set -e
-wget https://github.com/nook24/statusengine/archive/1.4.2.tar.gz
-tar xfv 1.4.2.tar.gz
-cd statusengine-1.4.2/
+
+#wget https://github.com/nook24/statusengine/archive/1.4.2.tar.gz
+#tar xfv 1.4.2.tar.gz
+#cd statusengine-1.4.2/
+
+wget https://github.com/nook24/statusengine/archive/master.zip
+unzip master.zip
+cd statusengine-master/
+
 sudo mkdir -p /opt/statusengine
 sudo mkdir -p /var/lib/pnp4nagios/perfdata/
 cd statusengine/src
