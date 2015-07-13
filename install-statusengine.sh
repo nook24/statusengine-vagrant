@@ -1,13 +1,15 @@
 #!/bin/bash
 set -e
 
-#wget https://github.com/nook24/statusengine/archive/1.4.2.tar.gz
-#tar xfv 1.4.2.tar.gz
-#cd statusengine-1.4.2/
+#Install 1.5.0 release
+wget https://github.com/nook24/statusengine/archive/1.5.0.tar.gz
+tar xfv 1.5.0.tar.gz
+cd statusengine-1.5.0/
 
-wget https://github.com/nook24/statusengine/archive/master.zip
-unzip master.zip
-cd statusengine-master/
+#Install master branch
+#wget https://github.com/nook24/statusengine/archive/master.zip
+#unzip master.zip
+#cd statusengine-master/
 
 #Install Statusengine database cleanup cronjob
 cp etc/cron.d/statusengine /etc/cron.d/statusengine
