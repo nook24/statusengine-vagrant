@@ -6,7 +6,7 @@ set -e
 #tar xfv 1.5.0.tar.gz
 #cd statusengine-1.5.0/
 
-Install master branch
+#Install master branch
 wget https://github.com/nook24/statusengine/archive/master.zip --no-verbose
 unzip master.zip
 cd statusengine-master/
