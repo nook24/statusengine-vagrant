@@ -25,7 +25,7 @@ cd ../../
 #Install MySQL database for Statusengine
 cd sql/
 mysql -uroot -pvagrant < statusengine.sql
-mysql -uroot -pvagrant < nagios.sql
+mysql -uroot -pvagrant < naemon.sql
 cd ..
 
 #Configure Apache2 web server
