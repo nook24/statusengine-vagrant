@@ -81,9 +81,9 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => 'vagrant',
-		'database' => 'nagios',
-		'prefix' => 'nagios_',
-		//'encoding' => 'utf8',
+		'database' => 'naemon',
+		'prefix' => 'naemon_',
+		'encoding' => 'utf8',
 	);
 
 	public $test = array(
