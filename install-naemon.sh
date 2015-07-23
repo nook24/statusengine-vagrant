@@ -4,7 +4,7 @@ set -e
 useradd naemon
 
 #Download and compile Naemon-Core
-wget https://github.com/naemon/naemon-core/archive/v1.0.3.tar.gz
+wget https://github.com/naemon/naemon-core/archive/v1.0.3.tar.gz --no-verbose
 tar xfv v1.0.3.tar.gz
 cd naemon-core-1.0.3/
 mkdir -p /opt/naemon
