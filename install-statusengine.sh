@@ -16,9 +16,14 @@ cp etc/cron.d/statusengine /etc/cron.d/statusengine
 
 #Install statusengine event broker
 mkdir -p /opt/statusengine
+
+#Install statusengine broker configuration file
+cp etc/statusengine.json /opt/statusengine/statusengine.json
+
+#Install statusengine event broker
 mkdir -p /var/lib/pnp4nagios/perfdata/
 cd statusengine/src
-LANG=C gcc -shared -o statusengine.o -fPIC  -Wall -Werror statusengine.c -luuid -levent -lgearman -ljson-c -DNAEMON;
+LANG=C gcc -shared -o statusengine.o -fPIC -D_GNU_SOURCE -Wall -Werror statusengine.c -luuid -levent -lgearman -ljson-c -DNAEMON;
 cp statusengine.o /opt/statusengine/
 cd ../../
 
