@@ -19,7 +19,7 @@ cp daemon-init /etc/init.d/naemon
 chmod +x /etc/init.d/naemon
 
 #Add Statusengine event broker module to naemon.cfg
-echo "broker_module=/opt/statusengine/statusengine.o" >> /opt/naemon/etc/naemon/naemon.cfg
+echo "broker_module=/opt/statusengine/statusengine.o /opt/statusengine/statusengine.json" >> /opt/naemon/etc/naemon/naemon.cfg
 
 #Fix Naemons resource.cfg for demo config
 echo '$USER1$=/opt/naemon/libexec' > /opt/naemon/etc/naemon/resource.cfg
