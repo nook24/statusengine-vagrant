@@ -2,9 +2,9 @@
 set -e
 
 #Install 1.5.1 release
-wget https://github.com/nook24/statusengine/archive/1.5.2.tar.gz --no-verbose
-tar xfv 1.5.2.tar.gz
-cd statusengine-1.5.2/
+wget https://github.com/nook24/statusengine/archive/1.5.1.tar.gz --no-verbose
+tar xfv 1.5.1.tar.gz
+cd statusengine-1.5.1/
 
 #Install master branch
 #wget https://github.com/nook24/statusengine/archive/master.zip --no-verbose
@@ -16,14 +16,9 @@ cp etc/cron.d/statusengine /etc/cron.d/statusengine
 
 #Install statusengine event broker
 mkdir -p /opt/statusengine
-
-#Install statusengine broker configuration file
-cp etc/statusengine.json /opt/statusengine/statusengine.json
-
-#Install statusengine event broker
 mkdir -p /var/lib/pnp4nagios/perfdata/
 cd statusengine/src
-LANG=C gcc -shared -o statusengine.o -fPIC -D_GNU_SOURCE -Wall -Werror statusengine.c -luuid -levent -lgearman -ljson-c -DNAEMON;
+LANG=C gcc -shared -o statusengine.o -fPIC  -Wall -Werror statusengine.c -luuid -levent -lgearman -ljson-c -DNAEMON;
 cp statusengine.o /opt/statusengine/
 cd ../../
 
