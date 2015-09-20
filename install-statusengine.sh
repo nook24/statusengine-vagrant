@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-#Install 1.5.1 release
-wget https://github.com/nook24/statusengine/archive/1.5.1.tar.gz --no-verbose
-tar xfv 1.5.1.tar.gz
-cd statusengine-1.5.1/
+#Install 1.5.2 release
+wget https://github.com/nook24/statusengine/archive/1.5.2.tar.gz --no-verbose
+tar xfv 1.5.2.tar.gz
+cd statusengine-1.5.2/
 
 #Install master branch
 #wget https://github.com/nook24/statusengine/archive/master.zip --no-verbose
