@@ -5,3 +5,4 @@ set -e
 # new Vagrantfile
 
 service statusengine restart
+
