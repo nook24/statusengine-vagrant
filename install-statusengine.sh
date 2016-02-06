@@ -2,9 +2,9 @@
 set -e
 
 #Install 1.5.3 release
-wget https://github.com/nook24/statusengine/archive/1.5.3.tar.gz --no-verbose
-tar xfv 1.5.3.tar.gz
-cd statusengine-1.5.3/
+wget https://github.com/nook24/statusengine/archive/1.6.0.tar.gz --no-verbose
+tar xfv 1.6.0.tar.gz
+cd statusengine-1.6.0/
 
 #Install master branch
 #wget https://github.com/nook24/statusengine/archive/master.zip --no-verbose
